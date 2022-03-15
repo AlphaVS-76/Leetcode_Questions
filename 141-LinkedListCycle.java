@@ -20,7 +20,7 @@ public class Solution {
         while(f != null && f.next != null){
             s = s.next;
             f = f.next.next;
-            
+            //if the pointers meet again, cycle is present
             if(s == f){
                 return true;
             }
