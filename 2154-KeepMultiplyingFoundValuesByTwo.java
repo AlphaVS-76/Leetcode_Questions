@@ -15,3 +15,18 @@ class Solution {
         return original;
     }
 }
+
+// Just a recursive solution
+
+class Solution {
+    public int findFinalValue(int[] nums, int original) {
+        int num = 0;
+        for(int i: nums){
+            if(i == original){
+                num = findFinalValue(nums, original*2);
+            }
+        }
+        if(num == 0)return original;
+        return num;
+    }
+}
